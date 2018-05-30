@@ -124,10 +124,9 @@ html {
     height: auto;
     background-color: #00561f;
     .container.sns-link {
+      display: inline-block;
       .sns-link {
-        display: inline-block;
-        .image.is-48x48 {
-          display: inline-block;
+        .image.is-48x48.center.sns {
           height: 48px;
           width: 48px;
           margin: 10px;

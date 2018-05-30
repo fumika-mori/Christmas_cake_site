@@ -4414,7 +4414,7 @@ a.box:active {
 }
 
 .image {
-  display: block;
+  display: inline-block;
   position: relative;
 }
 

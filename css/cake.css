@@ -3546,7 +3546,7 @@ a.box:active {
   width: 3rem; }
 
 .image {
-  display: block;
+  display: inline-block;
   position: relative; }
 
 .image img {
@@ -8783,10 +8783,9 @@ html {
   width: 100%;
   height: auto;
   background-color: #00561f; }
-  .hero .footer .container.sns-link .sns-link {
+  .hero .footer .container.sns-link {
     display: inline-block; }
-    .hero .footer .container.sns-link .sns-link .image.is-48x48 {
-      display: inline-block;
+    .hero .footer .container.sns-link .sns-link .image.is-48x48.center.sns {
       height: 48px;
       width: 48px;
       margin: 10px;

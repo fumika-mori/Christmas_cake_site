@@ -1,0 +1,1 @@
+[1/10/2018, 11:28:09 AM] layer "line.jpg": Duplicate path: line.jpg

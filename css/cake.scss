@@ -1,0 +1,230 @@
+/* Scss Document */
+@import "bulma";
+/* Scss Document */
+
+/* =====================================
+global-style
+==================================== */
+
+/* media_queries
+-------------------------------------*/
+
+$breakpoints: (
+  "smartphone": "screen and (max-width:768px)",
+  "tablet": "screen and (min-width: 769px) and (max-width: 1023px)",
+  "desktop": "screen and (min-width:1024px)"
+) !default;
+@mixin mq($breakpoint: desktop) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+/* 変数定義
+-------------------------------------*/
+/* color */
+
+$green: #00561f !important; // デフォルトカラー
+$maincolor: #00561f !important; // サイトメインカラー
+$white: #fff !important;
+$emphasis: #b42d20 !important; // アクセントメインカラー
+
+/* background-color */
+$white: #fff !important;
+
+/* font */
+
+$family-primary: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+  "Hiragino Kaku Gothic ProN", "segoe ui", "游ゴシック Medium", "メイリオ",
+  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$anton: "Anton", sans-serif;
+/* @mixin定義
+-------------------------------------*/
+
+/* ベンダープレフィックス */
+
+@mixin css3($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+    #{$prefix}#{$property}: $value;
+  }
+}
+@mixin back {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin border($border-width: 1px, $border-style: solid, $color: $green) {
+  border-width: $border-width;
+  border-style: $border-style;
+  color: $color;
+}
+.border {
+  @include border();
+}
+
+/* ヘッダー
+-------------------------------------*/
+
+/* コンテンツ
+-------------------------------------*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.hero {
+  .hero.is-medium {
+    .hero-body.top-image {
+      background-image: url("./pic/cake2-assets/topinfo.jpg") no-repeat;
+      background-size: auto 680px;
+      // background:rgb(250, 208, 208) url(image.jpg) no-repeat center center;
+      // background-size: contain;
+      .container {
+        .has-text-centered {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .attention {
+    text-align: center;
+    .box {
+      display: inline-block;
+      text-align: center;
+      h2.cake-title {
+        font-size: 25px;
+        border-bottom: 2px solid $green;
+        margin-bottom: 30px;
+      }
+      // h4 {
+      //   font-size: 18px;
+      //   font-weight: bold;
+      // }
+      max-width: 700px;
+      text-align: center;
+      padding: 2em;
+      margin: 3rem 0;
+      font-weight: bold;
+      color: $green;
+      background: #fff;
+      border: solid 3px $green;
+      border-radius: 10px;
+      p {
+        color: $green;
+        font-size: auto;
+        strong.annotation {
+          font-weight: 800;
+          font-size: 25px;
+          color: $green;
+        }
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    height: auto;
+    background-color: #00561f;
+    .container.sns-link {
+      .sns-link {
+        display: inline-block;
+        .image.is-48x48 {
+          display: inline-block;
+          height: 48px;
+          width: 48px;
+          margin: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .navbar-footer-menu {
+    .navbar-footer ul {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      li {
+        display: -moz-inline-box;
+        display: inline-block;
+        display: inline;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+      }
+      li + li {
+        border-left: 0;
+        border-right: 1px solid #fff;
+      }
+    }
+  }
+}
+.copy {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h2.title.is-3.has-text-dark {
+  margin: 0 auto;
+}
+.columns {
+  .column {
+    .card {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      // -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1),
+      //   0 0 0 1px rgba(10, 10, 10, 0.1);
+      // box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1),
+      //   0 0 0 1px rgba(10, 10, 10, 0.1);
+      color: #4a4a4a;
+      max-width: 95%;
+      position: relative;
+      .card-content {
+        h2.has-text-danger {
+          font-weight: 700;
+          font-size: 25px;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.button.is-medium {
+  font-size: 1.25rem;
+  width: 400px;
+  height: 5rem;
+  margin: 50px;
+}
+a.navbar-item.is-active,
+a.navbar-link.is-active {
+  color: #00561f;
+}
+.navbar-item,
+.navbar-link {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  display: inline-block;
+}
+.navbar {
+  background-color: #01561f;
+  width: 100%;
+  color: #01561f;
+  .navbar-item img {
+    max-height: 48px;
+  }
+  .container {
+    .navbar-brand {
+      .navbar-burger.burger.pc-off {
+        display: none !important;
+      }
+    }
+  }
+}
+
+/* フッター
+-------------------------------------*/

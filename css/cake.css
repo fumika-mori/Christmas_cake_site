@@ -68,7 +68,8 @@ html {
 
 * {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  text-align: center; }
 
 *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -8795,29 +8796,27 @@ html {
   width: 100%;
   height: auto;
   background-color: #00561f; }
-  .hero .footer .container.sns-link {
-    display: inline-block; }
-    .hero .footer .container.sns-link .sns-link .image.is-48x48.center.sns {
-      height: 48px;
-      width: 48px;
-      margin: 10px;
-      text-align: center; }
+  .hero .footer .container.sns-link .image.is-48x48.center.sns {
+    height: 48px;
+    width: 48px;
+    margin: 20px;
+    text-align: center; }
 
-.hero .navbar-footer-menu .navbar-footer ul {
+.navbar-footer-menu .navbar-footer ul {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 100px; }
-  .hero .navbar-footer-menu .navbar-footer ul li {
+  .navbar-footer-menu .navbar-footer ul li {
     display: -moz-inline-box;
     display: inline-block;
     display: inline;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff; }
-  .hero .navbar-footer-menu .navbar-footer ul li + li {
+  .navbar-footer-menu .navbar-footer ul li + li {
     border-left: 0;
     border-right: 1px solid #fff; }
 
-.hero .copy {
+.copy {
   font-size: 12px;
   color: #fff;
   text-align: center;
@@ -8826,33 +8825,33 @@ html {
   left: 0;
   right: 0; }
 
-.hero h2.title.is-3.has-text-dark {
+h2.title.is-3.has-text-dark {
   margin: 0 auto; }
 
-.hero .columns .column .card {
+.columns .column .card {
   width: 100%;
   height: 100%;
   background-color: white;
   color: #4a4a4a;
   max-width: 95%;
   position: relative; }
-  .hero .columns .column .card .card-content h2.has-text-danger {
+  .columns .column .card .card-content h2.has-text-danger {
     font-weight: 700;
     font-size: 25px;
     margin: 10px 0; }
 
-.hero .button.is-medium {
+.button.is-medium {
   font-size: 1.25rem;
   width: 400px;
   height: 5rem;
   margin: 50px; }
 
-.hero a.navbar-item.is-active,
-.hero a.navbar-link.is-active {
+a.navbar-item.is-active,
+a.navbar-link.is-active {
   color: #00561f; }
 
-.hero .navbar-item,
-.hero .navbar-link {
+.navbar-item,
+.navbar-link {
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
@@ -8861,13 +8860,13 @@ html {
   display: flex;
   display: inline-block; }
 
-.hero .navbar {
-  background-color: #01561f;
+.navbar {
+  background-color: #fff;
   width: 100%;
   color: #01561f; }
-  .hero .navbar .navbar-item img {
+  .navbar .navbar-item img {
     max-height: 48px; }
-  .hero .navbar .container .navbar-brand .navbar-burger.burger.pc-off {
+  .navbar .container .navbar-brand .navbar-burger.burger.pc-off {
     display: none !important; }
 
 /* フッター

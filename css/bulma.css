@@ -10574,24 +10574,25 @@ label.panel-block:hover {
   }
 }
 
-.hero.is-small .hero-body {
+/* .hero.is-small .hero-body {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
-}
+} */
 
 @media screen and (min-width: 769px), print {
   .hero.is-medium .hero-body {
-    padding-bottom: 9rem;
-    padding-top: 9rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    display: inline-block;
   }
 }
-
+/* 
 @media screen and (min-width: 769px), print {
   .hero.is-large .hero-body {
     padding-bottom: 18rem;
     padding-top: 18rem;
   }
-}
+} */
 
 .hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body {
   -webkit-box-align: center;
@@ -10700,7 +10701,7 @@ label.panel-block:hover {
 
 @media screen and (min-width: 1024px) {
   .section.is-medium {
-    padding: 9rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
   .section.is-large {
     padding: 18rem 1.5rem;

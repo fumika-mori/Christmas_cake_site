@@ -71,6 +71,20 @@ html {
   min-height: 100%;
   display: inline-block;
 }
+.hero-head {
+  .navbar {
+    .container {
+      .navbar-menu {
+        .navbar-end a {
+          -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+          align-items: center; /* 縦方向中央揃え */
+          // -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+          // justify-content: center; /* 横方向中央揃え */
+        }
+      }
+    }
+  }
+}
 
 .hero {
   .hero.is-medium {

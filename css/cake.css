@@ -8745,6 +8745,107 @@ global-style
 
 /* ヘッダー
 -------------------------------------*/
+/* ハンバーガーメニュー
+-------------------------------------*/
+.navbar-burger {
+  position: fixed;
+  /* bodyに対しての絶対位置指定 */
+  right: 30px;
+  top: 20px;
+  display: block;
+  width: 55px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 3;
+  border: 1px solid #00561f !important;
+  background-color: #fff !important; }
+
+.navbar-burger.burger.pc-off {
+  display: block;
+  position: absolute;
+  /* .toggleに対して */
+  width: 75%;
+  border-bottom: solid 3px #000;
+  -webkit-transition: 1ms linear;
+  -moz-transition: 1ms linear;
+  -ms-transition: 1ms linear;
+  -o-transition: 1ms linear;
+  transition: 1ms linear;
+  padding-top: 5px;
+  right: 6px; }
+
+.toggle span:nth-child(1) {
+  top: 5px; }
+
+.toggle span:nth-child(2) {
+  top: 15px; }
+
+.toggle span:nth-child(3) {
+  top: 25px; }
+
+.toggle span:nth-child(4) {
+  border: none;
+  top: 28px;
+  left: 7px;
+  font-size: 14px;
+  font-weight: bold; }
+
+/* クリック時 */
+/* 最初のspanをマイナス45度に */
+.toggle.active span:nth-child(1) {
+  top: 15px;
+  left: 4px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+/* 2番目と3番目のspanを45度に */
+.toggle.active span:nth-child(2),
+.toggle.active span:nth-child(3) {
+  top: 15px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* .global_nav */
+.global_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  z-index: 2;
+  padding-top: 100px;
+  text-align: center;
+  color: #000;
+  background: #ccc;
+  -webkit-transition: all 1ms;
+  -o-transition: all 1ms;
+  transition: all 1ms; }
+  .global_nav ul {
+    padding: 0 0 2rem; }
+    .global_nav ul .nav_li {
+      width: 100%;
+      padding: 10px;
+      list-style-type: none;
+      border-top: 1px dotted #00561f !important; }
+      .global_nav ul .nav_li a {
+        display: block;
+        color: #000; }
+
+.nav_li:last-child {
+  border-bottom: 1px dotted #00561f !important; }
+
+/* .global_navに.activeが追加 */
+.global_nav.active {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%); }
+
 /* コンテンツ
 -------------------------------------*/
 html {
@@ -8752,7 +8853,10 @@ html {
   min-height: 100%;
   display: inline-block; }
 
-.hero-head .navbar .container .navbar-menu .navbar-end a {
+.hero-head .navbar.container .navbar-menu .navbar-end {
+  height: 100%; }
+
+.hero-head .navbar.container .navbar-menu a {
   -webkit-align-items: center;
   /* 縦方向中央揃え（Safari用） */
   -webkit-box-align: center;
@@ -8760,8 +8864,15 @@ html {
   align-items: center;
   /* 縦方向中央揃え */ }
 
+.hero-head .navbar.container .navbar-menu .navbar-item.is-active {
+  margin-top: 1rem; }
+
+.hero-head .navbar.container .navbar-menu .navbar-item-container:hover {
+  background-color: whitesmoke; }
+
 .hero .hero.is-medium {
-  display: inline-block; }
+  display: inline-block;
+  margin-top: 1rem; }
   .hero .hero.is-medium .hero-body.top-image {
     background-image: url(/pic/cake2-assets/topinfo.jpg);
     background-repeat: no-repeat;
@@ -8770,7 +8881,7 @@ html {
     padding-bottom: 0 auto;
     padding-top: 0 auto;
     width: 100vw;
-    height: 100vh; }
+    height: 100%; }
     .hero .hero.is-medium .hero-body.top-image .img.top-img {
       text-align: center; }
 
@@ -8879,3 +8990,142 @@ a.navbar-link.is-active {
 
 /* フッター
 -------------------------------------*/
+/* index-レスポンシブスタイル
+==================================== */
+/* desktop-style
+-------------------------------------*/
+/* tablet-style
+-------------------------------------*/
+/* smartphone-style
+-------------------------------------*/
+@media screen and (max-width: 768px) {
+  html {
+    position: relative;
+    min-height: 100%;
+    display: inline-block; }
+  .hero-head .navbar.container .navbar-menu .navbar-end {
+    height: 100%; }
+  .hero-head .navbar.container .navbar-menu a {
+    -webkit-align-items: center;
+    /* 縦方向中央揃え（Safari用） */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* 縦方向中央揃え */ }
+  .hero-head .navbar.container .navbar-menu .navbar-item.is-active {
+    margin-top: 1rem; }
+  .hero-head .navbar.container .navbar-menu .navbar-item-container:hover {
+    background-color: whitesmoke; }
+  .hero .hero.is-medium {
+    display: inline-block;
+    margin-top: 1rem; }
+    .hero .hero.is-medium .hero-body.top-image {
+      background-image: url(/pic/cake2-assets/topinfo.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100vw;
+      height: 100%; }
+      .hero .hero.is-medium .hero-body.top-image .img.top-img {
+        text-align: center; }
+  .hero .attention {
+    text-align: center; }
+    .hero .attention .box {
+      display: inline-block;
+      text-align: center;
+      max-width: 700px;
+      text-align: center;
+      padding: 2em;
+      margin: 3rem 0;
+      font-weight: bold;
+      color: #00561f !important;
+      background: #fff;
+      border: solid 3px #00561f !important;
+      border-radius: 10px; }
+      .hero .attention .box h2.cake-title {
+        font-size: 25px;
+        border-bottom: 2px solid #00561f !important;
+        margin-bottom: 30px; }
+      .hero .attention .box p {
+        color: #00561f !important;
+        font-size: auto; }
+        .hero .attention .box p strong.annotation {
+          font-weight: 800;
+          font-size: 25px;
+          color: #00561f !important; }
+  .hero .footer {
+    width: 100%;
+    height: auto;
+    background-color: #00561f; }
+    .hero .footer .container.sns-link .image.is-48x48.center.sns {
+      height: 48px;
+      width: 48px;
+      margin: 20px;
+      text-align: center; }
+  .navbar-footer-menu .navbar-footer ul {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px; }
+    .navbar-footer-menu .navbar-footer ul li {
+      display: -moz-inline-box;
+      display: inline-block;
+      display: inline;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff; }
+    .navbar-footer-menu .navbar-footer ul li + li {
+      border-left: 0;
+      border-right: 1px solid #fff; }
+  .copy {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  h2.title.is-3.has-text-dark {
+    margin: 0 auto; }
+  .columns .column .card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: #4a4a4a;
+    max-width: 95%;
+    position: relative; }
+    .columns .column .card .card-content h2.has-text-danger {
+      font-weight: 700;
+      font-size: 25px;
+      margin: 10px 0; }
+  .button.is-medium {
+    font-size: 1.25rem;
+    width: 80%;
+    height: 5rem;
+    margin: 20px; }
+  a.navbar-item.is-active,
+  a.navbar-link.is-active {
+    color: #00561f; }
+  .navbar-item,
+  .navbar-link {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    display: inline-block; }
+  .navbar {
+    background-color: #fff;
+    width: 100%;
+    color: #01561f; }
+    .navbar .navbar-item img {
+      max-height: 48px; }
+    .navbar .navbar {
+      background-color: #fff;
+      width: 100%;
+      color: #01561f; }
+      .navbar .navbar .navbar-item img {
+        max-height: 48px; }
+      .navbar .navbar .container .navbar-brand .navbar-burger.burger.pc-off {
+        display: none !important; } }
+
+/* 下層ヘッダーナビリンク */

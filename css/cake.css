@@ -8856,6 +8856,10 @@ html {
 .hero-head .navbar.container .navbar-menu .navbar-end {
   height: 100%; }
 
+.hero-head .navbar.container .navbar-menu a.navbar-item.is-active,
+.hero-head .navbar.container .navbar-menu a.navbar-link.is-active {
+  height: 100%; }
+
 .hero-head .navbar.container .navbar-menu a {
   -webkit-align-items: center;
   /* 縦方向中央揃え（Safari用） */
@@ -9003,19 +9007,20 @@ a.navbar-link.is-active {
     position: relative;
     min-height: 100%;
     display: inline-block; }
-  .hero-head .navbar.container .navbar-menu .navbar-end {
-    height: 100%; }
-  .hero-head .navbar.container .navbar-menu a {
-    -webkit-align-items: center;
-    /* 縦方向中央揃え（Safari用） */
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    /* 縦方向中央揃え */ }
-  .hero-head .navbar.container .navbar-menu .navbar-item.is-active {
+  .navbar > .container .navbar-menu,
+  .container > .navbar .navbar-menu {
     margin-top: 1rem; }
-  .hero-head .navbar.container .navbar-menu .navbar-item-container:hover {
-    background-color: whitesmoke; }
+  .hero-head .navbar.container {
+    height: 100%; }
+    .hero-head .navbar.container .navbar-menu a {
+      -webkit-align-items: center;
+      /* 縦方向中央揃え（Safari用） */
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      /* 縦方向中央揃え */ }
+    .hero-head .navbar.container .navbar-menu .navbar-item-container:hover {
+      background-color: whitesmoke; }
   .hero .hero.is-medium {
     display: inline-block;
     margin-top: 1rem; }

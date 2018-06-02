@@ -21,14 +21,42 @@
 						<a class="navbar-item">
 							<img src="pic/pics/llogo_03.png" class="image is-48x48" alt="Logo">
 						</a>
-						<span class="navbar-burger burger pc-off" data-target="navbarMenuHeroA">
+						<div id="nav-drawer pc-off">
+							<input id="nav-input" type="checkbox" class="nav-unshown">
+							<label id="nav-open" for="nav-input">
+								<span></span>
+							</label>
+							<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+							<div id="nav-content">
+								<ul>
+									<li>
+										<a href="navbar-item is-active">ホーム</a>
+									</li>
+									<li>
+										<a href="navbar-item is-active">ケーキ一覧</a>
+									</li>
+									<li>
+										<a href="navbar-item is-active">アクセス</a>
+									</li>
+									<li>
+										<a href="navbar-item is-active">お問い合わせ</a>
+									</li>
+									<li>
+										<a href="navbar-item is-active">ご予約</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- <span class="navbar-burger burger pc-off">
 							<span>ホーム</span>
 							<span>ケーキ一覧</span>
 							<span>アクセス</span>
 							<span>お問い合わせ</span>
 							<span>ご予約はこちら</span>
-						</span>
+						</span> -->
 					</div>
+
 					<div id="navbarMenuHeroA" class="navbar-menu">
 						<div class="navbar-end">
 							<div class="top-menu">
@@ -88,7 +116,7 @@
 		</div>
 
 		<div class="hero-body ">
-			<div <div class="container has-text-centered">
+			<div class="container has-text-centered">
 				<h1 class="title ">
 					- ケーキラインナップ -
 				</h1>

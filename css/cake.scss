@@ -66,6 +66,17 @@ $anton: "Anton", sans-serif;
 /* ハンバーガーメニュー
 -------------------------------------*/
 
+.navbar-brand {
+  padding:10px;
+  background: whitesmoke;
+}
+
+#nav-content {
+  position: relative;
+}
+
+
+
 .navbar-burger {
   position: fixed;
   /* bodyに対しての絶対位置指定 */
@@ -79,26 +90,26 @@ $anton: "Anton", sans-serif;
   border: 1px solid $green;
   background-color: $white;
 }
-.navbar-burger.burger.pc-off {
+.navber-brand .navbar-burger.burger.pc-off {
   display: block;
   position: absolute;
-  /* .toggleに対して */
+  /* .navbar-burgerに対して */
   width: 75%;
   border-bottom: solid 3px #000;
   @include css3(transition, 1ms linear);
   padding-top: 5px;
   right: 6px;
 }
-.toggle span:nth-child(1) {
+.navbar-burger span:nth-child(1) {
   top: 5px;
 }
-.toggle span:nth-child(2) {
+.navbar-burger span:nth-child(2) {
   top: 15px;
 }
-.toggle span:nth-child(3) {
+.navbar-burger span:nth-child(3) {
   top: 25px;
 }
-.toggle span:nth-child(4) {
+.navbar-burger span:nth-child(4) {
   border: none;
   top: 28px;
   left: 7px;
@@ -109,7 +120,7 @@ $anton: "Anton", sans-serif;
 
 /* 最初のspanをマイナス45度に */
 
-.toggle.active span:nth-child(1) {
+.navbar-burger.active span:nth-child(1) {
   top: 15px;
   left: 4px;
   -webkit-transform: rotate(-45deg);
@@ -118,8 +129,8 @@ $anton: "Anton", sans-serif;
 }
 /* 2番目と3番目のspanを45度に */
 
-.toggle.active span:nth-child(2),
-.toggle.active span:nth-child(3) {
+.navbar-burger.active span:nth-child(2),
+.navbar-burger.active span:nth-child(3) {
   top: 15px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -172,6 +183,9 @@ html {
 }
 .hero-head {
   .navbar.container {
+     {
+
+    }
     .navbar-menu {
       .navbar-end {
         height: 100%;
@@ -194,6 +208,9 @@ html {
   }
 }
 
+img.image.is-48x48.center.sns {
+  margin: 5px;
+}
 .hero {
   .hero.is-medium {
     display: inline-block;
@@ -251,12 +268,13 @@ html {
         height: 48px;
         width: 48px;
         margin: 20px;
-
         text-align: center;
       }
     }
+    
   }
 }
+
 .navbar-footer-menu {
   .navbar-footer ul {
     text-align: center;
@@ -548,4 +566,5 @@ a.navbar-link.is-active {
     }
   }
 }
+
 /* 下層ヘッダーナビリンク */

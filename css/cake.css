@@ -8874,6 +8874,9 @@ html {
 .hero-head .navbar.container .navbar-menu .navbar-item-container:hover {
   background-color: whitesmoke; }
 
+img.image.is-48x48.center.sns {
+  margin: 5px; }
+
 .hero .hero.is-medium {
   display: inline-block;
   margin-top: 1rem; }

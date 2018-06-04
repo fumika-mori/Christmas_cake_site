@@ -8747,23 +8747,17 @@ global-style
 -------------------------------------*/
 /* ハンバーガーメニュー
 -------------------------------------*/
-.navbar-burger {
-  position: fixed;
-  /* bodyに対しての絶対位置指定 */
-  right: 30px;
-  top: 20px;
-  display: block;
-  width: 55px;
-  height: 60px;
-  cursor: pointer;
-  z-index: 3;
-  border: 1px solid #00561f !important;
-  background-color: #fff !important; }
+.navbar-brand {
+  padding: 10px;
+  background: whitesmoke; }
 
-.navbar-burger.burger.pc-off {
+#nav-content {
+  position: relative; }
+
+.navber-brand .navbar-burger.burger.pc-off {
   display: block;
   position: absolute;
-  /* .toggleに対して */
+  /* .navbar-burgerに対して */
   width: 75%;
   border-bottom: solid 3px #000;
   -webkit-transition: 1ms linear;
@@ -8774,16 +8768,16 @@ global-style
   padding-top: 5px;
   right: 6px; }
 
-.toggle span:nth-child(1) {
+.navbar-burger span:nth-child(1) {
   top: 5px; }
 
-.toggle span:nth-child(2) {
+.navbar-burger span:nth-child(2) {
   top: 15px; }
 
-.toggle span:nth-child(3) {
+.navbar-burger span:nth-child(3) {
   top: 25px; }
 
-.toggle span:nth-child(4) {
+.navbar-burger span:nth-child(4) {
   border: none;
   top: 28px;
   left: 7px;
@@ -8792,7 +8786,7 @@ global-style
 
 /* クリック時 */
 /* 最初のspanをマイナス45度に */
-.toggle.active span:nth-child(1) {
+.navbar-burger.active span:nth-child(1) {
   top: 15px;
   left: 4px;
   -webkit-transform: rotate(-45deg);
@@ -8801,8 +8795,8 @@ global-style
   transform: rotate(-45deg); }
 
 /* 2番目と3番目のspanを45度に */
-.toggle.active span:nth-child(2),
-.toggle.active span:nth-child(3) {
+.navbar-burger.active span:nth-child(2),
+.navbar-burger.active span:nth-child(3) {
   top: 15px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -8853,14 +8847,17 @@ html {
   min-height: 100%;
   display: inline-block; }
 
-.hero-head .navbar.container .navbar-menu .navbar-end {
+.hero-head .navbar.container {
+  background: #eee; }
+
+.hero-head .navbar-menu .navbar-end {
   height: 100%; }
 
-.hero-head .navbar.container .navbar-menu a.navbar-item.is-active,
-.hero-head .navbar.container .navbar-menu a.navbar-link.is-active {
+.hero-head .navbar-menu a.navbar-item.is-active,
+.hero-head .navbar-menu a.navbar-link.is-active {
   height: 100%; }
 
-.hero-head .navbar.container .navbar-menu a {
+.hero-head .navbar-menu a {
   -webkit-align-items: center;
   /* 縦方向中央揃え（Safari用） */
   -webkit-box-align: center;
@@ -8868,10 +8865,10 @@ html {
   align-items: center;
   /* 縦方向中央揃え */ }
 
-.hero-head .navbar.container .navbar-menu .navbar-item.is-active {
+.hero-head .navbar-menu .navbar-item.is-active {
   margin-top: 1rem; }
 
-.hero-head .navbar.container .navbar-menu .navbar-item-container:hover {
+.hero-head .navbar-menu .navbar-item-container:hover {
   background-color: whitesmoke; }
 
 img.image.is-48x48.center.sns {

@@ -77,19 +77,7 @@ $anton: "Anton", sans-serif;
 
 
 
-.navbar-burger {
-  position: fixed;
-  /* bodyに対しての絶対位置指定 */
-  right: 30px;
-  top: 20px;
-  display: block;
-  width: 55px;
-  height: 60px;
-  cursor: pointer;
-  z-index: 3;
-  border: 1px solid $green;
-  background-color: $white;
-}
+
 .navber-brand .navbar-burger.burger.pc-off {
   display: block;
   position: absolute;
@@ -183,8 +171,7 @@ html {
 }
 .hero-head {
   .navbar.container {
-     {
-
+      background: #eee;
     }
     .navbar-menu {
       .navbar-end {
@@ -206,7 +193,6 @@ html {
       }
     }
   }
-}
 
 img.image.is-48x48.center.sns {
   margin: 5px;
